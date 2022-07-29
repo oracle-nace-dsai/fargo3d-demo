@@ -139,6 +139,8 @@ job-name=fargo3d that is to be executed on 2 compute nodes using 32 cpus on each
 
     IP=172.16.5.172
 
+noting the above IP is merely a placeholder
+
 22 ssh into compute node:
 
     ssh opc@$IP
