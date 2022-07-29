@@ -222,14 +222,3 @@ and execute that notebook using the dataexpl_p37_cpu_v3 conda, to visualize the 
 
 3 then more actions > delete stack
 
-
-### notes
-
-1 Sam's policy changes, to enable bastion host to talk to ObjStore via instance_principal
-
-    Dynamic Group in root compartment:
-    Instance_Principal_Joe_Hahn
-    All { instance.compartment.id = 'ocid1.compartment.oc1..aaaaaaaacxtjcbxeizvysnn3fywjlreqcten6gcbbhcgpmcooez2cnmvvo4a' }
-    Policy in root compartment:
-    Instance_Prinicpal_Policy_Joe_Hahn
-    Allow dynamic-group Instance_Principal_Joe_Hahn to manage all-resources in compartment id ocid1.compartment.oc1..aaaaaaaacxtjcbxeizvysnn3fywjlreqcten6gcbbhcgpmcooez2cnmvvo4a
