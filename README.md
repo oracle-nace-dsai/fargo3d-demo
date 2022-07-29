@@ -84,8 +84,7 @@ which should report the name of your tenancy, and tells us that the bastion inst
 
 11 clone repo
 
-    git clone git@129.213.160.170:jhahn/fargo3d-demo.git
-    #git clone git@github.com:oracle-nace-dsai/fargo3d-demo.git
+    git clone git@github.com:oracle-nace-dsai/fargo3d-demo.git
     cd fargo3d-demo
 
 12 download and unpack fargo
