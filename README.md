@@ -147,7 +147,7 @@ noting the above IP is merely a placeholder
 
 23 enter 'top' then '1' to confirm that 28 of the nodes 36 cpus are busy (unsure if this is right...double check)
 
-24 use OCI console to click on one of two *-fargo3d-demo-stack compute nodes and confirm that its cpu utilization = 32/(2*36) = 44% 
+24 use OCI console to click on one of two <*>-fargo3d-demo-stack compute nodes and confirm that its cpu utilization = 32/(2*36) = 44% 
 as was observed ...???
 
 25 slurm job executes in 30.5 minutes
