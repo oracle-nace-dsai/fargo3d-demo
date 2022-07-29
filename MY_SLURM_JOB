@@ -1,0 +1,3 @@
+#!/bin/bash
+module load mpi/openmpi/openmpi-4.0.3rc4 
+time mpirun ./fargo3d -k ./setups/fargo/fargo.par
