@@ -45,7 +45,7 @@ where the -P option means no passphrase
     uncheck hyperthreading
 
 4 navigate to OCI > Compute > Instances then use the compartment navigator (lower left box) to find the compartment
-where you launched the above stack. Find the *-demo-stack-bastion instance, and note its public IP as bash variable
+where you launched the above stack. Find the fargo3_stack-bastion instance, and note its public IP as bash variable
 in your cloud shell session
 
     IP=132.145.135.54
