@@ -6,8 +6,9 @@ joe.hahn@oracle.com,<br />
 6 April 2022<br />
 git branch=master
 
-this demo creates an HPC cluster, and executes the fargo3d CFD code in parallel on that cluster, stages the fargo3d output in
-Object Store, then reads that output into a Data Science notebook where it is visualized.
+this demo creates an HPC cluster within the Oracle cloud OCI, and executes the fargo3d CFD code in parallel on that cluster, stages the fargo3d output in
+Object Store, then reads that output into a Data Science notebook where it is visualized. This demo is also summarized in blog post
+https://placeholder.url
 
 
 ### create Object Store bucket
