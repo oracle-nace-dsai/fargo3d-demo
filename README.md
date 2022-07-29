@@ -81,12 +81,6 @@ answering all question with default values except for user & tenancy ocids and r
 
 which should report the name of your tenancy, and tells us that the bastion instance can interact with Object Store buckets.
 
-#11 display public key
-#
-#    cat ~/.ssh/id_rsa.pub
-#
-#11 add public ssh key to your account at https://129.213.160.170/
-
 11 clone repo
 
     git clone git@129.213.160.170:jhahn/fargo3d-demo.git
@@ -195,26 +189,14 @@ executes in 1116min=18.6 hours, which is 37 times slower, ie not the expected 2x
     VCN=fargo3_stack_VCN
     subnet=fargo3_stack_private_subnet
 
-##2 create ssh key pair with no passphrase, then display public key
-##
-##    ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
-##    cat ~/.ssh/id_rsa.pub
-##
-##3 add public ssh key to your account at https://129.213.160.170/
-
 2  repeat above steps 6-11 to connect DS instance to Object Store 
-
-#3 tell git who you are:
-#
-#    git config --global user.email "joe.hahn@oracle.com"
-#    git config --global user.name "joe.hahn"
 
 3 install/activate conda
 
     odsc conda install -s dataexpl_p37_cpu_v3
     conda activate /home/datascience/conda/dataexpl_p37_cpu_v3
 
-7 copy concatentated_output.tgz from OS to DS and then expand:
+4 copy concatentated_output.tgz from OS to DS and then expand:
 
     bucket_name=Fargo3DStagingBucket
     os_file=concatentated_output.tgz
@@ -222,11 +204,11 @@ executes in 1116min=18.6 hours, which is 37 times slower, ie not the expected 2x
     tar -xvf concatentated_output.tgz
     cd concatentated_output
 
-8 cp display_fargo3d_output notebook to working directory
+5 cp display_fargo3d_output notebook to working directory
 
     cp ../display_fargo3d_output.ipynb .
 
-9 use file explorer at left edge to navigate to fargo3d-demo > concatentated_output > display_fargo3d_output.ipynb
+6 use file explorer at left edge to navigate to fargo3d-demo > concatentated_output > display_fargo3d_output.ipynb
 and execute that notebook using the dataexpl_p37_cpu_v3 conda, to visualize the HPC output
 
 
@@ -243,11 +225,11 @@ and execute that notebook using the dataexpl_p37_cpu_v3 conda, to visualize the 
 
 ### notes
 
-#1 Sam's policy changes, to enable bastion host to talk to ObjStore via instance_principal
-#
-#    Dynamic Group in root compartment:
-#    Instance_Principal_Joe_Hahn
-#    All { instance.compartment.id = 'ocid1.compartment.oc1..aaaaaaaacxtjcbxeizvysnn3fywjlreqcten6gcbbhcgpmcooez2cnmvvo4a' }
-#    Policy in root compartment:
-#    Instance_Prinicpal_Policy_Joe_Hahn
-#    Allow dynamic-group Instance_Principal_Joe_Hahn to manage all-resources in compartment id ocid1.compartment.oc1..aaaaaaaacxtjcbxeizvysnn3fywjlreqcten6gcbbhcgpmcooez2cnmvvo4a
+1 Sam's policy changes, to enable bastion host to talk to ObjStore via instance_principal
+
+    Dynamic Group in root compartment:
+    Instance_Principal_Joe_Hahn
+    All { instance.compartment.id = 'ocid1.compartment.oc1..aaaaaaaacxtjcbxeizvysnn3fywjlreqcten6gcbbhcgpmcooez2cnmvvo4a' }
+    Policy in root compartment:
+    Instance_Prinicpal_Policy_Joe_Hahn
+    Allow dynamic-group Instance_Principal_Joe_Hahn to manage all-resources in compartment id ocid1.compartment.oc1..aaaaaaaacxtjcbxeizvysnn3fywjlreqcten6gcbbhcgpmcooez2cnmvvo4a
