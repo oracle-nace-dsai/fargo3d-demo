@@ -8,7 +8,7 @@ git branch=master
 
 this demo creates an HPC cluster within the Oracle cloud OCI, and executes the fargo3d CFD code in parallel on that cluster, stages the fargo3d output in
 Object Store, then reads that output into a Data Science notebook where it is visualized. This demo is also summarized in blog post
-https://placeholder.url
+https://blogs.oracle.com/ai-and-datascience/post/using-jupyter-on-oci-data-science-to-analyze-hpc-results
 
 
 ### create Object Store bucket
